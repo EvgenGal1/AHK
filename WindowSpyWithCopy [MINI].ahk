@@ -11,16 +11,16 @@ WatchCursor() {
     ; окно вывода
     ToolTip(
         "TITLE : " windowTitle "`n"
+        "ahk_class : " windowClass "`n"
         "ahk_exe : " windowExe "`n"
         "ahk_id : " id "`n"
-        "ahk_class : " windowClass "`n"
         "Control : " control
     )
 
     ; проверка одновременного нажатия Ctrl+C. "P" (Physical) — физически нажатие на клвт. "T" (Toggle) — ключ переключаtvs[ клвш.типа Caps Lock
     if (GetKeyState("Ctrl", "P") and GetKeyState("C", "P")) {
         ; A_Clipboard := "ahk_id: " id "`n" "ahk_class: " windowClass "`n" "TITLE: " windowTitle "`n" "Control: " control
-        copiedData := "TITLE: " windowTitle "`n" "ahk_exe: " windowExe "`n" "ahk_id: " id "`n" "ahk_class: " windowClass "`n" "Control: " control
+        copiedData := "TITLE: " windowTitle "`n" "ahk_class: " windowClass "`n" "ahk_exe: " windowExe "`n" "ahk_id: " id "`n" "Control: " control
         A_Clipboard := copiedData
         Sleep(500)
 
