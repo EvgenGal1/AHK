@@ -52,7 +52,7 @@ if (PID := ProcessExist("AIMP.exe")) ; условие по процессу
 		Send "+^r" ; глобал.клвш.вкл.повтор  >>  Shift + Ctrl + R
 	}
 }
-	
+
 ; ^+s::RunWait(scriptTrack) 		;  Ctrl Shift S  >>  перезапустить скрипт трека с ожидание выполнения
 ^+a::ProcessClose("AIMP.exe") 		;  Ctrl Shift A  >>  закрыть AIMP
 ^q::ExitApp							; Ctrl Q  >>  завершит скрипт

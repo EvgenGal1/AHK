@@ -1,6 +1,9 @@
-/*
+*
 
 # ^ СВОЁ
 
-# ^ общ.врем.ИСКЛЮЧЁННЫЕ
-!/Start_AIMP_Sound (REPEAT).ahk
+# ^ общ.ИСКЛЮЧЕНИЯ
+!Start_AIMP_Sound (REPEAT).ahk
+# экранирование символов ч/з \
+!Start_AIMP_Sound (REPEAT) \[MINI\].ahk 
+!WindowSpyWithCopy \[MINI\].ahk
