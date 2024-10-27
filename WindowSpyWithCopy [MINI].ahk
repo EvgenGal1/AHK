@@ -6,21 +6,19 @@ WatchCursor() {
     MouseGetPos(&x, &y, &id, &control)
     windowTitle := WinGetTitle("ahk_id " id)
     windowClass := WinGetClass("ahk_id " id)
-    windowExe := WinGetClass("ahk_id " id)
+    windowExe := WinGetProcessName("ahk_id " id)
+    windowPid := WinGetPID("ahk_id " id)
+
+    ; шаблон вывода
+    tolTip := ("title : " windowTitle "`n" "class : " windowClass "`n" "exe : " windowExe "`n" "pid : " windowPid "`n" "id : " id "`n" "control : " control)
 
     ; окно вывода
-    ToolTip(
-        "TITLE : " windowTitle "`n"
-        "ahk_class : " windowClass "`n"
-        "ahk_exe : " windowExe "`n"
-        "ahk_id : " id "`n"
-        "Control : " control
-    )
+    ToolTip(tolTip)
 
     ; проверка одновременного нажатия Ctrl+C. "P" (Physical) — физически нажатие на клвт. "T" (Toggle) — ключ переключаtvs[ клвш.типа Caps Lock
     if (GetKeyState("Ctrl", "P") and GetKeyState("C", "P")) {
         ; A_Clipboard := "ahk_id: " id "`n" "ahk_class: " windowClass "`n" "TITLE: " windowTitle "`n" "Control: " control
-        copiedData := "TITLE: " windowTitle "`n" "ahk_class: " windowClass "`n" "ahk_exe: " windowExe "`n" "ahk_id: " id "`n" "Control: " control
+        copiedData := tolTip
         A_Clipboard := copiedData
         Sleep(500)
 
