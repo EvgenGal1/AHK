@@ -57,4 +57,4 @@ if (PID := ProcessExist("AIMP.exe")) ; условие по процессу
 ^+a::ProcessClose("AIMP.exe") 		;  Ctrl Shift A  >>  закрыть AIMP
 ^q::ExitApp							; Ctrl Q  >>  завершит скрипт
 ; ProcessClose("AIMP.exe")
-; ExitApp()
+ExitApp()
