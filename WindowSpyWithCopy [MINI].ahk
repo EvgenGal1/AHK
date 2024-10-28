@@ -10,7 +10,8 @@ WatchCursor() {
     windowPid := WinGetPID("ahk_id " id)
 
     ; шаблон вывода
-    tolTip := ("title : " windowTitle "`n" "class : " windowClass "`n" "exe : " windowExe "`n" "pid : " windowPid "`n" "id : " id "`n" "control : " control)
+    tolTip := ("title : " windowTitle "`n" "class : " windowClass "`n" "exe : " windowExe "`n" "pid : " windowPid "`n" "id : " id "`n" "control : " control
+    )
 
     ; окно вывода
     ToolTip(tolTip)

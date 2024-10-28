@@ -1,11 +1,11 @@
-﻿; #Persistent  ; Держит скрипт запущенным
+﻿; #Persistent  ; держит скрипт запущенным
 
 ; переменные: пути/приложения/файлы
 trackPath := "D:\Музон\Моё\MINI_Beethoven-Symphony№5.mp3"
 AIMP := "C:\Program Files (x86)\AIMP\AIMP.exe"
-targerString := "MINI_Beethoven-Symphony№5"
+audioName := "MINI_Beethoven-Symphony№5"
 
-; Запуск AIMP с заданным треком ч/з разделение перем.пробелом / ждать 0.5 сек.
+; запуск AIMP с заданным треком ч/з разделение перем.пробелом / ждать 0.5 сек.
 Run(AIMP ' ' trackPath)
 Sleep 500
 
@@ -38,21 +38,26 @@ if (PID := ProcessExist("AIMP.exe")) ; условие по процессу
     ; TITLE по PID процесса
     windowTitle := WinGetTitle("ahk_pid " PID)
 
-    ; проверка совпадения TITLE с назв.трека
-    if !InStr(windowTitle, targerString) {
-        ; активация необходимого трека
+    ; обход ошибки е/и AIMP скрылся - не отработал
+    if !windowTitle {
+        Run(AIMP)
+        Sleep 1000
+    }
+
+    ; проверка совпадения TITLE с назв.аудио
+    if !InStr(windowTitle, audioName) {
+        ; активация необходимого аудио
         Run(AIMP ' ' trackPath)
         Sleep 500
 
-        ; ВКЛ.повтор трека в AIMP (ч/з мкд. горячих клавиш)
+        ; вкл.повтор аудио в AIMP (ч/з мкд. горячих клавиш)
         ; Send "{r}" ; локал.клвш.вкл.повтор  >>  R (не раб.без активного окна)
         ; Send("{Shift Ctrl r}") или Send("{Shift Ctrl R}") ; не раб
         Send "+^r" ; глобал.клвш.вкл.повтор  >>  Shift + Ctrl + R
     }
 }
 
-; ^+s::RunWait(scriptTrack) 		;  Ctrl Shift S  >>  перезапустить скрипт трека с ожидание выполнения
-^+a:: ProcessClose("AIMP.exe") 		;  Ctrl Shift A  >>  закрыть AIMP
-^q:: ExitApp							; Ctrl Q  >>  завершит скрипт
-; ProcessClose("AIMP.exe")
-ExitApp()
+^+a:: ProcessClose("AIMP.exe") 		; Ctrl Shift A  >>  закрыть AIMP
+^+q:: ExitApp						; Ctrl Shift Q  >>  завершит скрипт
+; ProcessClose("AIMP.exe")			; авто закрытие AIMP
+ExitApp()							; авто выход из скрипта
