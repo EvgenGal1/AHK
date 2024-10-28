@@ -7,3 +7,4 @@
 # экранирование символов ч/з \
 !Start_AIMP_Sound (REPEAT) \[MINI\].ahk 
 !WindowSpyWithCopy \[MINI\].ahk
+!AutoReturnToRemote.ahk
