@@ -35,10 +35,10 @@ if (PID := ProcessExist("AIMP.exe")) ; условие по процессу
     ; задержка для активации AIMP
     Sleep 1000
 
-    ; TITLE по PID процесса
+    ; получить TITLE по PID процесса
     windowTitle := WinGetTitle("ahk_pid " PID)
 
-    ; обход ошибки е/и AIMP скрылся - не отработал
+    ; обход ошибки е/и AIMP скрыт
     if !windowTitle {
         Run(AIMP)
         Sleep 1000
