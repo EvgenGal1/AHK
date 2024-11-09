@@ -3,13 +3,14 @@
 # ^ СВОЁ
 
 # ^ общ.ИСКЛЮЧЕНИЯ
-!Start_AIMP_Sound (REPEAT).ahk
+!AutoReturnToRemote.ahk
+!AutoStartDPD.ahk
+!MonitorINFO.ahk
 # экранирование символов ч/з \
 !Start_AIMP_Sound (REPEAT) \[MINI\].ahk 
-!WindowSpyWithCopy \[MINI\].ahk
-!AutoReturnToRemote.ahk
-!MonitorINFO.ahk
+!Start_AIMP_Sound (REPEAT).ahk
 !Window1.ahk
 !Window2.ahk
 !Window3.ahk
 !Window4.ahk
+!WindowSpyWithCopy \[MINI\].ahk
