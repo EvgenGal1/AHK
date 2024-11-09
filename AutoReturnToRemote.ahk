@@ -48,21 +48,11 @@ CheckForChanges() {
             ; отметка своей категорией по горяч.клвш.
             ; Send selectCategory
         }
-        else {
-
-            ToolTip("ВСЁ РОВНО!")
-            Sleep(1000)
-            ToolTip()
-        }
-    }
-    else {
-
-        ToolTip("Окно удалёнки не найдено!")
-        Sleep(1000)
-        ToolTip()
     }
 }
 
+^+s:: SetTimer(CheckForChanges, checkInterval) 		; Ctrl Shift Q  >>  старт
+^+d:: SetTimer(CheckForChanges, 0) 		; Ctrl Shift Q  >>  пауза
 ^+a:: ProcessClose("AIMP.exe") 		; Ctrl Shift Q  >>  закрыть AIMP
 ^+q:: ExitApp  						; Ctrl Shift Q  >>  завершить скрипт
 ; ExitApp
