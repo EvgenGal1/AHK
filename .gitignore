@@ -3,8 +3,8 @@
 # ^ СВОЁ
 
 # ^ общ.ИСКЛЮЧЕНИЯ
-!AutoReturnToRemote.ahk
-!DPD_start.ahk
+!DPD_ReturnToRemote.ahk
+!DPD_StartRemote.ahk
 !MonitorINFO.ahk
 # экранирование символов ч/з \
 !ShiftRemoteWindow.ahk
