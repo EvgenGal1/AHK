@@ -6,12 +6,13 @@ CoordMode("Mouse", "Screen")
 SetTimer(CheckForChanges, checkInterval)
 
 CheckForChanges() {
-    global aimpScriptPath, remoteWindowTitle, defaultColor, trackingX, trackingY, windowMaxX, windowMaxY
+    global aimpScriptPath, remoteWindowTitle, defaultColor1, defaultColor2, trackingX, trackingY, windowMaxX,
+        windowMaxY
 
     if WinExist(remoteWindowTitle) {
         currentColor := Format("{:X}", PixelGetColor(trackingX, trackingY, "RGB"))
 
-        if (Format("{:X}", defaultColor) != currentColor) {
+        if (Format("{:X}", defaultColor1) != currentColor && Format("{:X}", defaultColor2) != currentColor) {
             Click trackingX, trackingY
 
             SetTimer(CheckForChanges, 0)
