@@ -4,8 +4,6 @@ CoordMode("Mouse", "Window")
 #Include "D:\Про\Творения\AHK\DPD [VAR].ahk"
 
 RunApp(targetApp) {
-    global VPN_App, SMS_App
-
     runTargetApp := ""
 
     if (targetApp = "VPN") {
@@ -18,31 +16,43 @@ RunApp(targetApp) {
     if !WinExist("ahk_exe " %targetApp% ".exe") {
         Run runTargetApp
         Sleep 4000
-    }
 
-    WinActivate("ahk_exe " %targetApp% ".exe")
-    Sleep 1500
+        WinActivate("ahk_exe " %targetApp% ".exe")
+        Sleep 1500
+    }
 }
 
 RunHandler(targetHandler) {
-    global VPN_App, SMS_App
-
     if (targetHandler = "VPN") {
-        Sleep 3000
         if WinExist(VPN_AuthTitle) {
-            WinActivate VPN_AuthTitle
-            Sleep 1500
-            Send "!{F4}"
-            Sleep 1500
+            RunHandler("VPN_auth")
         }
 
         WinActivate("ahk_exe " %targetHandler% ".exe")
         Sleep 1500
-
-        Click VPN_ClickAccessX, VPN_ClickAccessY
-        Sleep 1000
         Click VPN_ClickConnectX, VPN_ClickConnectY
         Sleep 3000
+    }
+    else if (targetHandler = "VPN_auth") {
+        RunHandler("SMS")
+
+        WinActivate VPN_AuthTitle
+        Sleep 1500
+
+        Click VPN_ClickAuthX VPN_ClickAuthY
+        Sleep 1500
+        Send "^v"
+        Sleep 1500
+        Send "{Enter}"
+        Sleep 10000
+
+        if VPN_WarnsMap.Has(WinGetTitle("A")) {
+            RunHandler("VPN_warn")
+        }
+
+        RunHandler("Remote_App")
+        Run Meseng_App
+        ExitApp()
     }
     else if (targetHandler = "SMS") {
         WinMaximize("ahk_exe " %targetHandler% ".exe")
@@ -78,16 +88,18 @@ RunHandler(targetHandler) {
         Send "{Enter}"
         Sleep 10000
 
-        if WinExist(VPN_Warn) {
-            WinActivate VPN_Warn
-            Sleep 1500
-            Send "!{F4}"
-            Sleep 1500
-            RunHandler("VPN")
-            Sleep 3000
-            RunHandler("SMS")
-            RunHandler("VPN_dop")
+        if VPN_WarnsMap.Has(WinGetTitle("A")) {
+            RunHandler("VPN_warn")
         }
+    }
+    else if (targetHandler = "VPN_warn") {
+        Send "{Enter}"
+        Sleep 1500
+
+        RunHandler("VPN")
+        Sleep 3000
+        RunHandler("SMS")
+        RunHandler("VPN_dop")
     }
     else if (targetHandler = "Remote_App") {
         Run Remote_App
