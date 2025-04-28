@@ -81,7 +81,7 @@ RunHandler(targetHandler) {
         WinActivate("ahk_exe " VPN ".exe")
         Sleep 1500
 
-        Click VPN_ClickConfirmX, VPN_ClickConfirmY
+        Click VPN_ClickInputPasteX, VPN_ClickInputPasteY
         Sleep 1500
         Send "^v"
         Sleep 1500
