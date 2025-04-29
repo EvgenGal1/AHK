@@ -15,5 +15,7 @@ Sleep 500
 Click 240, 260
 Sleep 500
 
+Run(pathScriptReturnToRemote)
+
 ^+q:: ExitApp
 ExitApp()
