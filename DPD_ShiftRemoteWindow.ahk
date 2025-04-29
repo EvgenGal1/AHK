@@ -1,3 +1,6 @@
+CoordMode("Pixel", "Screen")
+CoordMode("Mouse", "Screen")
+
 #Include "D:\Про\Творения\AHK\DPD [VAR].ahk"
 
 WinActivate("ahk_exe " Remote_App ".exe")
@@ -5,17 +8,20 @@ Sleep 500
 
 Click 1000, 0
 Sleep 500
-Click 1000, 15, 2
-Sleep 500
+if WinExist("ahk_class" Remote_Class_Window) {
+    Click 1000, 15, 2
+    Sleep 500
+}
 
 WinMove(A_ScreenWidth - (A_ScreenWidth * 0.2), 0, A_ScreenWidth * 0.2 + 5, A_ScreenHeight - 32, "ahk_exe " Remote_App ".exe"
 )
 Sleep 500
 
-Click 240, 260
+Click Remote_Click_VhodSmsX, Remote_Click_VhodSmsY
 Sleep 500
+Click Remote_TrackingX, Remote_TrackingY
 
-Run(pathScriptReturnToRemote)
+Run(Remote_DF_ReturnToRemote)
 
 ^+q:: ExitApp
 ExitApp()
