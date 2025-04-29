@@ -6,10 +6,10 @@ CoordMode("Mouse", "Screen")
 WinActivate("ahk_exe " Remote_App ".exe")
 Sleep 500
 
-Click 1000, 0
+Click Remote_WindowWrapper_ShowX, Remote_WindowWrapper_ShowY
 Sleep 500
-if WinExist("ahk_class" Remote_Class_Window) {
-    Click 1000, 15, 2
+if WinExist("ahk_class" Remote_WindowWrapper_Class) {
+    Click Remote_WindowWrapper_ShowX, Remote_WindowWrapper_Click_WindowMaxY, 2
     Sleep 500
 }
 

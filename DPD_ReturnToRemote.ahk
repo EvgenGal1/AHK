@@ -6,8 +6,8 @@ CoordMode("Mouse", "Screen")
 SetTimer(CheckForChanges, checkInterval)
 
 CheckForChanges() {
-    global Audio_DF_Start, Remote_Title, allowedColors, Remote_TrackingX, Remote_TrackingY, Remote_Click_WindowMax,
-        Remote_Click_WindowMaY
+    global Audio_DF_Start, Remote_Title, allowedColors, Remote_TrackingX, Remote_TrackingY, Remote_Click_WindowMaxX,
+        Remote_Click_WindowMaxY
 
     if WinExist(Remote_Title) {
         currentColor := Format("{:X}", PixelGetColor(Remote_TrackingX, Remote_TrackingY, "RGB"))
@@ -20,7 +20,7 @@ CheckForChanges() {
             Run(Audio_DF_Start)
 
             WinActivate(Remote_Title)
-            Click Remote_Click_WindowMax, Remote_Click_WindowMaY
+            Click Remote_Click_WindowMaxX, Remote_Click_WindowMaxY
 
             ExitApp
         }
