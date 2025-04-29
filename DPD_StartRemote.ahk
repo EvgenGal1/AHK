@@ -30,7 +30,7 @@ RunHandler(targetHandler) {
 
         WinActivate("ahk_exe " %targetHandler% ".exe")
         Sleep 1500
-        Click VPN_ClickConnectX, VPN_ClickConnectY
+        Click VPN_Click_ConnectX, VPN_Click_ConnectY
         Sleep 3000
     }
     else if (targetHandler = "VPN_auth") {
@@ -39,7 +39,7 @@ RunHandler(targetHandler) {
         WinActivate VPN_AuthTitle
         Sleep 1500
 
-        Click VPN_ClickAuthX VPN_ClickAuthY
+        Click VPN_Click_AuthX VPN_Click_AuthY
         Sleep 1500
         Send "^v"
         Sleep 1500
@@ -60,12 +60,12 @@ RunHandler(targetHandler) {
         Run SMS_Bot
         Sleep 5000
 
-        Click SMS_ClickX, SMS_ClickY
+        Click SMS_Click_DownX, SMS_Click_DownY
         Sleep 2000
-        Click SMS_ClickX, SMS_ClickY
+        Click SMS_Click_DownX, SMS_Click_DownY
         Sleep 2000
 
-        Click SMS_ClickNextX, SMS_ClickNextY, 2
+        Click SMS_Click_CopyX, SMS_Click_CopyY, 2
         Sleep 1500
         Send "^c"
         Sleep 1500
@@ -81,7 +81,7 @@ RunHandler(targetHandler) {
         WinActivate("ahk_exe " VPN ".exe")
         Sleep 1500
 
-        Click VPN_ClickInputPasteX, VPN_ClickInputPasteY
+        Click VPN_Click_InputPasteX, VPN_Click_InputPasteY
         Sleep 1500
         Send "^v"
         Sleep 1500
@@ -105,9 +105,9 @@ RunHandler(targetHandler) {
         Run Remote_App
         Sleep 2000
 
-        Click Remate_ClickX, Remate_ClickY
+        Click Remote_Click_PasteX, Remate_ClickY
         Sleep 1500
-        Click Remate_ClickX, Remate_ClickY, 2
+        Click Remote_Click_PasteX, Remate_ClickY, 2
         Sleep 1500
 
         SendInput Remote_Name

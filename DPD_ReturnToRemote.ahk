@@ -6,20 +6,21 @@ CoordMode("Mouse", "Screen")
 SetTimer(CheckForChanges, checkInterval)
 
 CheckForChanges() {
-    global aimpScriptPath, remoteWindowTitle, allowedColors, trackingX, trackingY, windowMaxX, windowMaxY
+    global Audio_DF_Start, Remote_Title, allowedColors, Remote_TrackingX, Remote_TrackingY, Remote_Click_WindowMax,
+        Remote_Click_WindowMaY
 
-    if WinExist(remoteWindowTitle) {
-        currentColor := Format("{:X}", PixelGetColor(trackingX, trackingY, "RGB"))
+    if WinExist(Remote_Title) {
+        currentColor := Format("{:X}", PixelGetColor(Remote_TrackingX, Remote_TrackingY, "RGB"))
 
         if !allowedColors.Has(currentColor) {
-            Click trackingX, trackingY
+            Click Remote_TrackingX, Remote_TrackingY
 
             SetTimer(CheckForChanges, 0)
 
-            Run(aimpScriptPath)
+            Run(Audio_DF_Start)
 
-            WinActivate(remoteWindowTitle)
-            Click windowMaxX, windowMaxY
+            WinActivate(Remote_Title)
+            Click Remote_Click_WindowMax, Remote_Click_WindowMaY
 
             ExitApp
         }
