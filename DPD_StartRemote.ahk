@@ -105,9 +105,9 @@ RunHandler(targetHandler) {
         Run Remote_App
         Sleep 2000
 
-        Click Remote_Click_PasteX, Remate_ClickY
+        Click Remote_Click_PasteX, Remote_Click_PasteY
         Sleep 1500
-        Click Remote_Click_PasteX, Remate_ClickY, 2
+        Click Remote_Click_PasteX, Remote_Click_PasteY, 2
         Sleep 1500
 
         SendInput Remote_Name
