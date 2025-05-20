@@ -20,6 +20,11 @@ Sleep 500
 Click Remote_Click_VhodSmsX, Remote_Click_VhodSmsY
 Sleep 500
 Click Remote_TrackingSmsX, Remote_TrackingSmsY
+Sleep 500
+loop 30
+    MouseClick "WheelUp"
+Sleep 500
+Click Remote_TrackingSmsX, Remote_TrackingSmsY
 
 Run(Remote_DF_ReturnToRemote)
 
