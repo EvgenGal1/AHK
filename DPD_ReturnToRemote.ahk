@@ -5,8 +5,14 @@ CoordMode("Mouse", "Screen")
 
 SetTimer(CheckForChanges, checkInterval)
 
-CheckForChanges() {
-    if WinExist(Remote_Title) {
+if WinExist(Remote_Title) {
+    Click Remote_Click_VhodSmsX, Remote_Click_VhodSmsY
+    Sleep 500
+    Click Remote_TrackingSmsX, Remote_TrackingSmsY
+    Sleep 500
+
+    CheckForChanges() {
+
         currentColor := Format("{:X}", PixelGetColor(Remote_TrackingSmsX, Remote_TrackingSmsY, "RGB"))
 
         if !allowedColors.Has(currentColor) {
