@@ -17,15 +17,6 @@ WinMove(A_ScreenWidth - (A_ScreenWidth * 0.2), 0, A_ScreenWidth * 0.2 + 5, A_Scr
 )
 Sleep 500
 
-Click Remote_Click_VhodSmsX, Remote_Click_VhodSmsY
-Sleep 500
-Click Remote_TrackingSmsX, Remote_TrackingSmsY
-Sleep 500
-loop 30
-    MouseClick "WheelUp"
-Sleep 500
-Click Remote_TrackingSmsX, Remote_TrackingSmsY
-
 Run(Remote_DF_ReturnToRemote)
 
 ^+q:: ExitApp
