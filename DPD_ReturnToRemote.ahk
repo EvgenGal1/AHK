@@ -1,12 +1,12 @@
+#Requires AutoHotkey v2.0
+
 CoordMode("Pixel", "Screen")
 CoordMode("Mouse", "Screen")
 
 #Include "D:\Про\Творения\AHK\DPD [VAR].ahk"
 
 CheckForChanges() {
-    currentColor := Format("{:X}", PixelGetColor(Remote_TrackingSmsX, Remote_TrackingSmsY, "RGB"))
-
-    if !allowedColors.Has(currentColor) {
+    if !CheckColor() {
         Click Remote_TrackingSmsX, Remote_TrackingSmsY
 
         SetTimer(CheckForChanges, 0)
@@ -14,7 +14,14 @@ CheckForChanges() {
         Run(Audio_DF_Start)
 
         WinActivate(Remote_Title)
-        Click Remote_Click_WindowMaxX, Remote_Click_WindowMaxY
+        Sleep 500
+
+        SendInput "{LWin down}"
+        SendInput "{Up}"
+        Sleep 50
+        SendInput "{Up}"
+        SendInput "{LWin up}"
+
         ExitApp
     }
 
