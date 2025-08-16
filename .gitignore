@@ -6,9 +6,10 @@
 !DPD_ReturnToRemote.ahk
 !DPD_StartRemote.ahk
 !DPD_ShiftRemoteWindow.ahk
+!CheckColorChanges.ahk
 !MonitorINFO.ahk
-# экранирование символов ч/з \
 !ShiftRemoteWindow.ahk
+# экранирование символов ч/з \
 !Start_AIMP_Sound (REPEAT) \[MINI\].ahk
 !Start_AIMP_Sound (REPEAT).ahk
 !Window1 (HORIZONT).ahk
