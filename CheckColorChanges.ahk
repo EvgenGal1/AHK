@@ -2,14 +2,24 @@
 
 #Include "D:\Про\Творения\AHK\DPD [VAR].ahk"
 
-CoordMode("Pixel", "Screen")
-CoordMode("Mouse", "Screen")
-
-WinActivate("ahk_exe " Remote_App ".exe")
-Sleep 500
-
 CheckColor() {
-    currentColor := Format("{:X}", PixelGetColor(Remote_TrackingSmsX, Remote_TrackingSmsY, "RGB"))
+    originalMode := A_CoordModePixel
+
+    CoordMode("Pixel", "Screen")
+
+    if !WinExist(Remote_Title) {
+        CoordMode("Pixel", originalMode)
+        return true
+    }
+
+    WinGetPos(&winX, &winY, &winW, &winH, Remote_Title)
+
+    absoluteX := winX + Remote_Clt_TrackingSmsX
+    absoluteY := winY + Remote_Clt_TrackingSmsY
+
+    currentColor := Format("{:X}", PixelGetColor(absoluteX, absoluteY, "RGB"))
+
+    CoordMode("Pixel", originalMode)
 
     return allowedColors.Has(currentColor)
 }
