@@ -3,6 +3,7 @@
 # ^ СВОЁ
 
 # ^ общ.ИСКЛЮЧЕНИЯ
+!DPD_ExitRemoteFullScreen.ahk
 !DPD_ReturnToRemote.ahk
 !DPD_StartRemote.ahk
 !DPD_ShiftRemoteWindow.ahk
@@ -21,3 +22,6 @@
 !Window4 (HORIZONT).ahk
 !Window4 (VERTICAL).ahk
 !WindowSpyWithCopy \[MINI\].ahk
+!WindowGetMonitor.ahk
+!WindowMoveToMonitor.ahk
+!WindowMoveToMonitorArea.ahk
