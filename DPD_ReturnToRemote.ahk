@@ -8,14 +8,17 @@ CoordMode("Mouse", "Client")
 
 CheckForChanges() {
     if !CheckColor() {
-        Click Remote_TrackingSmsX, Remote_TrackingSmsY
+        WinActivate(Remote_Title)
+        Sleep 500
+
+        Click Remote_Clt_TrackingSmsX, Remote_Clt_TrackingSmsY
 
         SetTimer(CheckForChanges, 0)
 
         Run(Audio_DF_Start)
 
         WinActivate(Remote_Title)
-        Sleep 500
+        Sleep 100
 
         SendInput "{LWin down}"
         SendInput "{Up}"
@@ -30,7 +33,8 @@ CheckForChanges() {
         Click x + (w // 2), y + (h // 2)
         Sleep 500
 
-        Click Remote_TrackingSmsX, Remote_TrackingSmsY
+        Click Remote_Clt_TrackingSmsX, Remote_Clt_TrackingSmsY
+        Sleep 500
 
         ExitApp
     }
@@ -38,16 +42,19 @@ CheckForChanges() {
 }
 
 if WinExist(Remote_Title) {
-    Click Remote_Click_VhodSmsX, Remote_Click_VhodSmsY
+    WinActivate(Remote_Title)
     Sleep 500
 
-    Click Remote_TrackingSmsX, Remote_TrackingSmsY
+    Click Remote_Click_Clt_VhodSmsX, Remote_Click_Clt_VhodSmsY
+    Sleep 500
+
+    Click Remote_Clt_TrackingSmsX, Remote_Clt_TrackingSmsY
     Sleep 500
 
     loop 30
         MouseClick "WheelUp"
     Sleep 1000
-    Click Remote_TrackingSmsX, Remote_TrackingSmsY
+    Click Remote_Clt_TrackingSmsX, Remote_Clt_TrackingSmsY
     Sleep 500
 
     SetTimer(CheckForChanges, checkInterval)
