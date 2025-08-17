@@ -1,9 +1,9 @@
 #Requires AutoHotkey v2.0
 
+#Include "D:\Про\Творения\AHK\DPD [VAR].ahk"
+
 CoordMode("Pixel", "Screen")
 CoordMode("Mouse", "Screen")
-
-#Include "D:\Про\Творения\AHK\DPD [VAR].ahk"
 
 WinActivate("ahk_exe " Remote_App ".exe")
 Sleep 500

@@ -3,9 +3,9 @@
 WindowGetMonitor(WindowTitle) {
     WinGetPos(&x, &y, &w, &h, WindowTitle)
 
-    Monitors := MonitorGetCount()
+    MonitorCount := MonitorGetCount()
 
-    loop Monitors {
+    loop MonitorCount {
         MonitorGetWorkArea(A_Index, &left, &top, &right, &bottom)
 
         centerX := x + (w // 2)
@@ -18,3 +18,5 @@ WindowGetMonitor(WindowTitle) {
 
     return 1
 }
+
+; WindowGetMonitor(Remote_Title)

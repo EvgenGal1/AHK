@@ -1,7 +1,9 @@
-CoordMode("Pixel", "Window")
-CoordMode("Mouse", "Window")
+#Requires AutoHotkey v2.0
 
 #Include "D:\Про\Творения\AHK\DPD [VAR].ahk"
+
+CoordMode("Pixel", "Window")
+CoordMode("Mouse", "Window")
 
 RunApp(targetApp) {
     runTargetApp := ""
