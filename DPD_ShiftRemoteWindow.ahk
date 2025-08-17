@@ -6,7 +6,9 @@
 WinActivate(Remote_Title)
 Sleep 500
 
-ExitRemoteFullScreen()
+if WinExist(Remote_Title) {
+    ExitRemoteFullScreen()
+}
 
 WinActivate(Remote_Title)
 Sleep 500
