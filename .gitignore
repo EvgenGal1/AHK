@@ -4,9 +4,11 @@
 
 # ^ общ.ИСКЛЮЧЕНИЯ
 !DPD_ExitRemoteFullScreen.ahk
+!DPD_MessageMy.ahk
+!DPD_MessageSend.ahk
+!DPD_MessageTop.ahk
 !DPD_RestoreSplitWindows.ahk
 !DPD_ReturnToRemote.ahk
-!DPD_SendMessage.ahk
 !DPD_StartRemote.ahk
 !DPD_ShiftRemoteWindow.ahk
 !CheckColorChanges.ahk
