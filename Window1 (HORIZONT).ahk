@@ -7,8 +7,8 @@
 ; "Window4" | "окнаЧетыри" : браузер - верх лево 80%, удал-ка - верх право 20%, VSCode - низ
 
 ; переменные Exe приложений
-WindowVSCExe := "Code.exe"
-WindowBrowserExe := "chrome.exe"
+#Include "D:\Про\Творения\AHK\DPD [VAR].ahk"
+#Include "D:\Про\Творения\AHK\WindowMoveToMonitorArea.ahk"
 
 ; кол-во мониторов
 MonitorCount := MonitorGetCount()
@@ -38,3 +38,5 @@ if (MonitorCount > 1) {
         WinMove(0, 0, A_ScreenWidth, A_ScreenHeight - 40, "ahk_exe " WindowBrowserExe)		; откр.в раб.область на 2-ом мониторе
     }
 }
+
+ExitApp()

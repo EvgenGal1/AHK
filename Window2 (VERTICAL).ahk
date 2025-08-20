@@ -1,5 +1,4 @@
-﻿WindowVSCExe := "Code.exe"
-WindowBrowserExe := "chrome.exe"
+﻿#Include "D:\Про\Творения\AHK\DPD [VAR].ahk"
 
 MonitorCount := MonitorGetCount()
 
@@ -21,3 +20,5 @@ if (MonitorCount > 1) {
         WinMove(0, 0, A_ScreenWidth, A_ScreenHeight - 40, "ahk_exe " WindowVSCExe)
     }
 }
+
+ExitApp()

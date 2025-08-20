@@ -1,8 +1,5 @@
 ﻿; переменные Exe приложений
-WindowVSCExe := "Code.exe"
-WindowBrowserExe := "chrome.exe"
-WindowRemoteExe := "mstsc.exe"
-WindowRemoteClass := "TscShellContainerClass"
+#Include "D:\Про\Творения\AHK\DPD [VAR].ahk"
 
 ; кол-во мониторов
 MonitorCount := MonitorGetCount()
@@ -45,3 +42,5 @@ if (MonitorCount > 1) {
     }
     Sleep 250
 }
+
+ExitApp()
