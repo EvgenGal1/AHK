@@ -17,14 +17,10 @@
 # экранирование символов ч/з \
 !Start_AIMP_Sound (REPEAT) \[MINI\].ahk
 !Start_AIMP_Sound (REPEAT).ahk
-!Window1 (HORIZONT).ahk
-!Window1 (VERTICAL).ahk
-!Window2 (HORIZONT).ahk
-!Window2 (VERTICAL).ahk
-!Window3 (HORIZONT).ahk
-!Window3 (VERTICAL).ahk
-!Window4 (HORIZONT).ahk
-!Window4 (VERTICAL).ahk
+!Window1.ahk
+!Window2.ahk
+!Window3.ahk
+!Window4.ahk
 !WindowSpyWithCopy \[MINI\].ahk
 !WindowGetMonitor.ahk
 !WindowMoveToMonitor.ahk
