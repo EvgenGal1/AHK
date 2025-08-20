@@ -63,4 +63,3 @@ if WinExist(Remote_Title) {
 ^+e:: SetTimer(CheckForChanges, checkInterval)
 ^+d:: SetTimer(CheckForChanges, 0)
 ^+a:: ProcessClose("AIMP.exe")
-^+q:: ExitApp

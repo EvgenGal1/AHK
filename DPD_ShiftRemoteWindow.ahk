@@ -16,5 +16,4 @@ Sleep 500
 
 Run(Remote_DF_ReturnToRemote)
 
-^+q:: ExitApp
 ExitApp()

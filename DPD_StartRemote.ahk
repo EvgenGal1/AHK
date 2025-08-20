@@ -139,5 +139,4 @@ Run Meseng_App
 
 Run Voise_Bot
 
-^+q:: ExitApp
 ExitApp()

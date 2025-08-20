@@ -135,5 +135,3 @@ ResizeWindowToTargetPercent(WindowTitle, side, percent, monitorWidth) {
 
 ; WindowMoveToMonitorArea(Remote_Title, 2, "R_20")
 ; WindowMoveToMonitorArea("ahk_exe chrome.exe", 2, "L_80")
-
-^+q:: ExitApp
