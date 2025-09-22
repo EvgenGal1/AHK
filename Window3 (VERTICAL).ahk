@@ -1,5 +1,5 @@
 ; переменные Exe приложений
-#Include "D:\Про\Творения\AHK\DPD [VAR].ahk"
+#Include "D:\Pro\Projects\AHK\DPD [VAR].ahk"
 
 ; кол-во мониторов
 MonitorCount := MonitorGetCount()
