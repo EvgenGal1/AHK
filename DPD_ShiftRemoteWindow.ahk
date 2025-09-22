@@ -1,7 +1,7 @@
 #Requires AutoHotkey v2.0
 
-#Include "D:\Про\Творения\AHK\DPD [VAR].ahk"
-#Include "D:\Про\Творения\AHK\DPD_ExitRemoteFullScreen.ahk"
+#Include "D:\Pro\Projects\AHK\DPD [VAR].ahk"
+#Include "D:\Pro\Projects\AHK\DPD_ExitRemoteFullScreen.ahk"
 
 WinActivate(Remote_Title)
 Sleep 500

@@ -1,6 +1,6 @@
 #Requires AutoHotkey v2.0
 
-#Include "D:\Про\Творения\AHK\WindowMoveToMonitorArea.ahk"
+#Include "D:\Pro\Projects\AHK\WindowMoveToMonitorArea.ahk"
 
 WindowMoveToMonitorArea(Remote_Title, 2, "R_20")
 

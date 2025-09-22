@@ -1,9 +1,9 @@
 #Requires AutoHotkey v2.0
 
-#Include "D:\Про\Творения\AHK\DPD [VAR].ahk"
-#Include "D:\Про\Творения\AHK\WindowGetMonitor.ahk"
-#Include "D:\Про\Творения\AHK\WindowMoveToMonitor.ahk"
-#Include "D:\Про\Творения\AHK\DPD_ExitRemoteFullScreen.ahk"
+#Include "D:\Pro\Projects\AHK\DPD [VAR].ahk"
+#Include "D:\Pro\Projects\AHK\WindowGetMonitor.ahk"
+#Include "D:\Pro\Projects\AHK\WindowMoveToMonitor.ahk"
+#Include "D:\Pro\Projects\AHK\DPD_ExitRemoteFullScreen.ahk"
 
 WindowMoveToMonitorArea(WindowTitle, MonitorNumber, Position) {
     MonitorCount := MonitorGetCount()
