@@ -13,8 +13,8 @@ Sleep 250
 
 if WinExist("ahk_exe " WindowRemoteExe) {
     WindowMoveToMonitorArea(Remote_Title, 1, "B_40")
-    Sleep 250
 }
+Sleep 250
 
 if WinExist("ahk_exe " WindowBrowserExe) {
     WindowMoveToMonitorArea("ahk_exe " WindowBrowserExe, 2, "M")
