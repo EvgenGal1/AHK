@@ -17,6 +17,7 @@
 # экранирование символов ч/з \
 !Start_AIMP_Sound (REPEAT) \[MINI\].ahk
 !Start_AIMP_Sound (REPEAT).ahk
+!WindowManager.ahk
 !Window1.ahk
 !Window2.ahk
 !Window3.ahk
