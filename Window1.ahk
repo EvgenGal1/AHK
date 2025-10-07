@@ -2,22 +2,14 @@
 
 #Include "D:\Pro\Projects\AHK\DPD [VAR].ahk"
 #Include "D:\Pro\Projects\AHK\WindowMoveToMonitorArea.ahk"
+#Include "D:\Pro\Projects\AHK\WindowManager.ahk"
 
-if WinExist("ahk_exe" WindowVSCExe) {
-    WindowMoveToMonitorArea("ahk_exe " WindowVSCExe, 1, "M")
-}
-if WinExist("ahk_exe" WindowASExe) {
-    WindowMoveToMonitorArea("ahk_exe " WindowASExe, 1, "M")
-}
-Sleep 250
+; использ.готовый конфиг > окна 1 (мжн.доб.задержку)
+WindowManager.MoveWindows(GlobalWindowConfigs["windowParams1"])
 
-if WinExist("ahk_exe " WindowRemoteExe) {
-    WindowMoveToMonitorArea(Remote_Title, 1, "B_40")
-}
-Sleep 250
-
-if WinExist("ahk_exe " WindowBrowserExe) {
-    WindowMoveToMonitorArea("ahk_exe " WindowBrowserExe, 2, "M")
-}
+; ; отдельн.конфиг. и передача
+; myConfig := [{ exe: WindowBrowserExe, monitor: 2, area: "M" }, { exe: WindowVSCExe, monitor: 1, area: "M" }, { exe: WindowASExe,
+;     monitor: 1, area: "M" }, { exe: WindowRemoteExe, monitor: 1, area: "B_40" }]
+; WindowManager.MoveWindows(myConfig)
 
 ExitApp()
