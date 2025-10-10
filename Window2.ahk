@@ -3,13 +3,13 @@
 #Include "D:\Pro\Projects\AHK\DPD [VAR].ahk"
 #Include "D:\Pro\Projects\AHK\WindowMoveToMonitorArea.ahk"
 
-if WinExist("ahk_exe " WindowBrowserExe) {
-    WindowMoveToMonitorArea("ahk_exe " WindowBrowserExe, 1, "M")
+if WinExist("ahk_exe " BrowserChromeExe) {
+    WindowMoveToMonitorArea("ahk_exe " BrowserChromeExe, 1, "M")
 }
 Sleep 250
 
 if WinExist("ahk_exe " WindowRemoteExe) {
-    WindowMoveToMonitorArea(Remote_Title, 1, "B_40")
+    WindowMoveToMonitorArea("ahk_exe " WindowRemoteExe, 1, "B_40")
 }
 Sleep 250
 

@@ -3,15 +3,16 @@
 #Include "D:\Pro\Projects\AHK\DPD [VAR].ahk"
 #Include "D:\Pro\Projects\AHK\DPD_ExitRemoteFullScreen.ahk"
 
-WinActivate(Remote_Title)
+WinActivate("ahk_exe " WindowRemoteExe)
 Sleep 500
 
 ExitRemoteFullScreen()
 
-WinActivate(Remote_Title)
+WinActivate("ahk_exe " WindowRemoteExe)
 Sleep 500
 
-WinMove(A_ScreenWidth - (A_ScreenWidth * 0.2), 0, A_ScreenWidth * 0.2 + 5, A_ScreenHeight - 32, Remote_Title)
+WinMove(A_ScreenWidth - (A_ScreenWidth * 0.2), 0, A_ScreenWidth * 0.2 + 5, A_ScreenHeight - 32, "ahk_exe " WindowRemoteExe
+)
 Sleep 500
 
 Run(Remote_DF_ReturnToRemote)

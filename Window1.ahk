@@ -8,7 +8,7 @@
 WindowManager.MoveWindows(GlobalWindowConfigs["windowParams1"])
 
 ; ; отдельн.конфиг. и передача
-; myConfig := [{ exe: WindowBrowserExe, monitor: 2, area: "M" }, { exe: WindowVSCExe, monitor: 1, area: "M" }, { exe: WindowASExe,
+; myConfig := [{ exe: BrowserChromeExe, monitor: 2, area: "M" }, { exe: WindowVSCExe, monitor: 1, area: "M" }, { exe: WindowASExe,
 ;     monitor: 1, area: "M" }, { exe: WindowRemoteExe, monitor: 1, area: "B_40" }]
 ; WindowManager.MoveWindows(myConfig)
 

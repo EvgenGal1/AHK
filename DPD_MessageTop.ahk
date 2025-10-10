@@ -7,8 +7,8 @@ CoordMode("Pixel", "Client")
 CoordMode("Mouse", "Client")
 
 TopMessage() {
-    if WinExist(Remote_Title) {
-        WinActivate(Remote_Title)
+    if WinExist("ahk_exe " WindowRemoteExe) {
+        WinActivate("ahk_exe " WindowRemoteExe)
         Sleep 500
 
         Click Remote_Click_Clt_VhodSmsX, Remote_Click_Clt_VhodSmsY
@@ -28,6 +28,7 @@ TopMessage() {
     ExitApp
 }
 
+; е/и внешн.запуск - сравн. путь ф.скрипта и путь ф.исполняемого (...Start.ahk != ...Top.ahk)
 if (A_LineFile = A_ScriptFullPath) {
     TopMessage()
 }

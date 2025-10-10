@@ -10,9 +10,10 @@ if (MonitorCount > 1) {
 
     ; проверка приложения
     if WinExist("ahk_exe " WindowBrowserExe) {
-        WinWait("ahk_exe " WindowBrowserExe)			; ожидает приложения
-        WinActivate("ahk_exe " WindowBrowserExe)		; актвирует окно приложения
-        WinMove(-1920, 0, A_ScreenWidth, A_ScreenHeight - 40, "ahk_exe " WindowBrowserExe)		; откр.в раб.область на 1-ом мониторе
+        WinWait("ahk_exe " WindowBrowserExe)
+        WinActivate("ahk_exe " WindowBrowserExe)
+        ; откр.в раб.область на 1-ом мониторе
+        WinMove(-1920, 0, A_ScreenWidth, A_ScreenHeight - 40, "ahk_exe " WindowBrowserExe)
     }
     Sleep 250
 }
@@ -28,7 +29,8 @@ if (MonitorCount > 1) {
         Sleep 250
         WinActivate("ahk_exe " WindowVSCExe)
         Sleep 250
-        WinMove(0, 0, A_ScreenWidth, A_ScreenHeight - 40, "ahk_exe " WindowVSCExe)				; откр.в раб.область на 2-ом мониторе
+        ; откр.в раб.область на 2-ом мониторе
+        WinMove(0, 0, A_ScreenWidth, A_ScreenHeight - 40, "ahk_exe " WindowVSCExe)
     }
 }
 

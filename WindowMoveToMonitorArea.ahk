@@ -14,7 +14,7 @@ WindowMoveToMonitorArea(WindowTitle, MonitorNumber, Position) {
     WinActivate(WindowTitle)
     Sleep 500
 
-    if (InStr(WindowTitle, Remote_Title)) {
+    if (InStr(WindowTitle, "ahk_exe " WindowRemoteExe)) {
         ExitRemoteFullScreen()
     }
 
