@@ -28,7 +28,7 @@ class WindowManager {
                 }
             }
             catch as e {
-                OutputDebug("Ошибка с окном: " config.exe " - " e.Message)
+                OutputDebug("Ошибка с окном: " window.exe " - " e.Message)
             }
         }
     }
