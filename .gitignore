@@ -8,7 +8,7 @@
 !DPD_MessageSend.ahk
 !DPD_MessageTop.ahk
 !DPD_RestoreSplitWindows.ahk
-!DPD_ReturnToRemote.ahk
+!DPD_CheckAndOpenRemoteDesktop.ahk
 !DPD_StartRemote.ahk
 !DPD_ShiftRemoteWindow.ahk
 !CheckColorChanges.ahk
