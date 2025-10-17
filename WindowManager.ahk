@@ -34,19 +34,24 @@ class WindowManager {
     }
 }
 
-; глобал.конфиг.окон
+; глобал.конфиг.окон (разные параметры сценариев) > распред.по экранам. Экраны: Ноут (1), монитор (2)
 GlobalWindowConfigs := Map(
-    ; конфиги > разных сценариев с индивид. окнами/параметрами
-    "windowParams_1", [{ exe: BrowserChromeExe, monitor: 2, area: "M" }, { exe: BrowserYandexExe, monitor: 2, area: "M" }, { exe: BrowserEdgeExe,
-        monitor: 2, area: "M" }, { exe: WindowVSCExe, monitor: 1, area: "M" }, { exe: WindowASExe, monitor: 1, area: "M" }, { exe: WindowRemoteExe,
-            monitor: 1, area: "B_40" }],
+    ; IDE макс.на ноут, браузер макс.на монитор, удалёнка 20% вниз на ноут,
+    "windowParams_1", [{ exe: WindowVSCExe, monitor: 1, area: "M" }, { exe: WindowASExe, monitor: 1, area: "M" }, { exe: WindowRemoteExe,
+        monitor: 1, area: "B_40" }, { exe: BrowserChromeExe, monitor: 2, area: "M" }, { exe: BrowserYandexExe, monitor: 2,
+            area: "M" }, { exe: BrowserEdgeExe,
+                monitor: 2, area: "M" }],
+    ; IDE макс.на монитор, браузер макс.на ноут, удалёнка 20% вниз на ноут
     "windowParams_2", [{ exe: BrowserChromeExe, monitor: 1, area: "M" }, { exe: BrowserYandexExe, monitor: 1, area: "M" }, { exe: BrowserEdgeExe,
         monitor: 1, area: "M" }, { exe: WindowRemoteExe, monitor: 1, area: "B_40" }, { exe: WindowVSCExe,
             monitor: 2, area: "M" }, { exe: WindowASExe, monitor: 2, area: "M" }],
+    ; IDE макс.на ноут, браузер 80% в лево на монитор, удалёнка 20% в право на монитор
     "windowParams_3", [{ exe: WindowVSCExe, monitor: 1, area: "M" }, { exe: WindowASExe, monitor: 1, area: "M" }, { exe: BrowserChromeExe,
         monitor: 2, area: "L_80" }, { exe: BrowserYandexExe, monitor: 2, area: "L_80" }, { exe: BrowserEdgeExe, monitor: 2,
             area: "L_80" }, { exe: WindowRemoteExe, monitor: 2, area: "R_20" }],
+    ; браузер макс.на ноут, IDE 80% в лево на монитор, удалёнка 20% в право на монитор
     "windowParams_4", [{ exe: BrowserChromeExe, monitor: 1, area: "M" }, { exe: BrowserYandexExe, monitor: 1, area: "M" }, { exe: BrowserEdgeExe,
-        monitor: 1, area: "M" }, { exe: WindowRemoteExe, monitor: 2, area: "R_20" }, { exe: WindowVSCExe,
-            monitor: 2, area: "L_80" }, { exe: WindowASExe, monitor: 2, area: "L_80" }]
+        monitor: 1, area: "M" } { exe: WindowVSCExe,
+            monitor: 2, area: "L_80" }, { exe: WindowASExe, monitor: 2, area: "L_80" }, { exe: WindowRemoteExe, monitor: 2,
+                area: "R_20" },]
 )
