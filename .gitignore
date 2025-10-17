@@ -9,10 +9,9 @@
 !DPD_MessageTop.ahk
 !DPD_CheckAndOpenRemoteDesktop.ahk
 !DPD_StartRemote.ahk
-!DPD_ShiftRemoteWindow.ahk
+!DPD_ShiftRemoteDestop.ahk
 !CheckColorChanges.ahk
 !MonitorINFO.ahk
-!ShiftRemoteWindow.ahk
 # экранирование символов ч/з \
 !Start_AIMP_Sound (REPEAT) \[MINI\].ahk
 !Start_AIMP_Sound (REPEAT).ahk

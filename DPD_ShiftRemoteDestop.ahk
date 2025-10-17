@@ -7,4 +7,8 @@
 myConfig := [{ exe: WindowRemoteExe, monitor: 2, area: "R_20" }]
 WindowManager.MoveWindows(myConfig)
 
+; запуск отслеживания для возврата на удалёнку
+Run(CheckAndOpenRemoteDesktop)
+
+; сброс кода, завершение скрипта
 ExitApp()
