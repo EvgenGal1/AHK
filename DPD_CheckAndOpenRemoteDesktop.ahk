@@ -10,6 +10,10 @@ CoordMode("Mouse", "Client")
 CheckForChanges() {
     ; е/и НЕ прошла проверка цвета открыть окно удалёнки
     if !CheckColor() {
+        ; активация окна удалёнки
+        WinActivate("ahk_exe " WindowRemoteExe)
+        Sleep 500
+
         ; блокировка мыши/клавиатуры от лишних операций
         BlockInput(true)
 
@@ -19,22 +23,22 @@ CheckForChanges() {
         ; запуск AIMP оповещения без ожидания завершения скрипта
         Run(Audio_DF_Start)
 
-        ; активация окна удалёнки
+        ; активация окна удалёнки (от лишних кликов)
         WinActivate("ahk_exe " WindowRemoteExe)
         Sleep 500
 
-        ; клик на первое смс (для прогрузки 1-го смс)
-        Click Remote_Clt_TrackingSmsX, Remote_Clt_TrackingSmsY
+        ; клик на первое смс для прогрузки 1-го смс (откл.от ложн.кликов по Windows уведомлениям)
+        ; Click Remote_Clt_TrackingSmsX, Remote_Clt_TrackingSmsY
 
-        ; клик по раскрытию окна (откл.от ложн.срабатываний)
-        ; WinMaximize("ahk_exe " WindowRemoteExe)
+        ; раскрытие окна удалёнки 2р. т.к. раб.ч/з четвердь-полное (откл.от ложн.обраб.при Windows уведомлениях)
+        ; SendInput "{LWin down}"
+        ; SendInput "{Up}"
+        ; Sleep 100
+        ; SendInput "{Up}"
+        ; SendInput "{LWin up}"
 
-        ; раскрытие окна удалёнки (2р. т.к.  раб.ч/з четвердь-полное)
-        SendInput "{LWin down}"
-        SendInput "{Up}"
-        Sleep 100
-        SendInput "{Up}"
-        SendInput "{LWin up}"
+        ; откр.макс.размер окна
+        WinMaximize("ahk_exe " WindowRemoteExe)
 
         ; активация окна удалёнки на случай всплывшего AIMP
         WinActivate("ahk_exe " WindowRemoteExe)
