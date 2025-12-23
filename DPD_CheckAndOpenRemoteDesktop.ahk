@@ -22,10 +22,10 @@ CheckForChanges() {
 
         ; запуск AIMP оповещения без ожидания завершения скрипта
         Run(Audio_DF_Start)
+        Sleep 500
 
         ; активация окна удалёнки (от лишних кликов)
         WinActivate("ahk_exe " WindowRemoteExe)
-        Sleep 500
 
         ; клик на первое смс для прогрузки 1-го смс (откл.от ложн.кликов по Windows уведомлениям)
         ; Click Remote_Clt_TrackingSmsX, Remote_Clt_TrackingSmsY
@@ -39,10 +39,10 @@ CheckForChanges() {
 
         ; откр.макс.размер окна
         WinMaximize("ahk_exe " WindowRemoteExe)
+        Sleep 500
 
         ; активация окна удалёнки на случай всплывшего AIMP
         WinActivate("ahk_exe " WindowRemoteExe)
-        Sleep 500
 
         ; ; клик в центр окна (вроде не нужно)
         ; WinGetPos(&x, &y, &w, &h, Remote_Title)
