@@ -83,7 +83,7 @@ if WinExist("ahk_exe " WindowRemoteExe) {
     Click Remote_Clt_TrackingSmsX, Remote_Clt_TrackingSmsY
     Sleep 500
 
-    ; запуск отслеживания
+    ; запуск отслеживания по таймеру
     SetTimer(CheckForChanges, checkInterval)
 }
 
