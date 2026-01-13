@@ -14,10 +14,10 @@ CheckColor() {
         ; окно не найдено - не срабатывать ложно
         return true
     }
-    ; вычисл.коорд.окна удалёнки относительно экрана
-    WinGetPos(&winX, &winY, &winW, &winH, "ahk_exe " WindowRemoteExe)
+    ; вычисл.коорд.окна удалёнки по титлу (откл.по exe) относительно экрана
+    WinGetPos(&winX, &winY, &winW, &winH, Remote_Title) ; "ahk_exe " WindowRemoteExe
     ; учёт раскрытого/рамочного режима окна (+ рамка к коордам)
-    if (winX != 0 && winY != 0) {
+    if (winX != 0 || winY != 0) {
         winX := winX + 8
         winY := winY + 31
     }
