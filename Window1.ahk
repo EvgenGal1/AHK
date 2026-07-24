@@ -1,6 +1,6 @@
 ﻿#Requires AutoHotkey v2.0
 
-#Include "D:\Pro\Projects\AHK\WindowManager.ahk"
+#Include "D:\Pro\Code\AHK\WindowManager.ahk"
 
 ; использ.готовый конфиг.окон > окна 1 (мжн.доб.задержку)
 WindowManager.MoveWindows(GlobalWindowConfigs["windowParams_1"])

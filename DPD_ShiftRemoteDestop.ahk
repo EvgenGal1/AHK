@@ -1,7 +1,7 @@
 #Requires AutoHotkey v2.0
 
-#Include "D:\Pro\Projects\AHK\DPD [VAR].ahk"
-#Include "D:\Pro\Projects\AHK\WindowManager.ahk"
+#Include "D:\Pro\Code\AHK\DPD [VAR].ahk"
+#Include "D:\Pro\Code\AHK\WindowManager.ahk"
 
 ; отдельн.конфиг.окна удалёнки и передача в логику перемещения
 myConfig := [{ exe: WindowRemoteExe, monitor: 2, area: "R_20" }]

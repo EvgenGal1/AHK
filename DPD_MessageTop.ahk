@@ -1,11 +1,12 @@
 #Requires AutoHotkey v2.0
 
-#Include "D:\Pro\Projects\AHK\DPD [VAR].ahk"
-#Include "D:\Pro\Projects\AHK\DPD_MessageSend.ahk"
+#Include "D:\Pro\Code\AHK\DPD [VAR].ahk"
+#Include "D:\Pro\Code\AHK\DPD_MessageSend.ahk"
 
 CoordMode("Pixel", "Client")
 CoordMode("Mouse", "Client")
 
+; дубль с CheckAndOpenRemoteWindow
 TopMessage() {
     if WinExist("ahk_exe " WindowRemoteExe) {
         WinActivate("ahk_exe " WindowRemoteExe)

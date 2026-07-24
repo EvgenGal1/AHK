@@ -7,8 +7,8 @@
 ; "Window4" | "окнаЧетыри" : VSCode - верх лево 80%, удал-ка - верх право 20%, браузер - низ
 
 ; переменные Exe приложений
-#Include "D:\Pro\Projects\AHK\DPD [VAR].ahk"
-#Include "D:\Pro\Projects\AHK\WindowMoveToMonitorArea.ahk"
+#Include "D:\Pro\Code\AHK\DPD [VAR].ahk"
+#Include "D:\Pro\Code\AHK\WindowMoveToMonitorArea.ahk"
 
 ; кол-во мониторов
 MonitorCount := MonitorGetCount()
