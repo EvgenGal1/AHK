@@ -1,9 +1,7 @@
-﻿; #Persistent  ; держит скрипт запущенным
+﻿#Requires AutoHotkey v2.0
+; #Persistent  ; держит скрипт запущенным
 
-; переменные: пути/приложения/файлы
-trackPath := "D:\Музон\Моё\MINI_Beethoven-Symphony№5.mp3"
-AIMP := "C:\Program Files (x86)\AIMP\AIMP.exe"
-audioName := "MINI_Beethoven-Symphony№5"
+#Include "D:\Pro\Code\AHK\DPD [VAR].ahk"
 
 ; запуск AIMP с заданным треком ч/з разделение перем.пробелом / ждать 0.5 сек.
 Run(AIMP ' ' trackPath)
